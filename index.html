@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海底撈火鍋｜期間限定優惠券限量領取</title>
+  <meta name="description" content="海底撈期間限定優惠券，一鍵領取滿1500折500限時折抵！數量有限，立即前往領取。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 背景氛圍光晕與飄浮元素 -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="fire-sparks" id="fireSparks"></div>
+
+  <!-- 頂部跑馬燈通知 -->
+  <aside class="top-banner">
+    <div class="banner-track">
+      <span>🔥 【限定特惠】全台門市適用！數量有限，發完即止！</span>
+      <span>🧧 限時折抵：滿 $1500 現折 $500！</span>
+      <span>⏰ 今日名額最後倒數中，敬請把握機會！</span>
+      <span>🔥 【限定特惠】全台門市適用！數量有限，發完即止！</span>
+    </div>
+  </aside>
+
+  <!-- 主容器 -->
+  <div class="container">
+    <!-- 品牌標頭 -->
+    <header class="header">
+      <div class="brand-badge">
+        <span class="badge-icon">🍲</span>
+        <span class="badge-text">HAIDILAO SPECIAL OFFER</span>
+      </div>
+      <h1 class="main-title">
+        <span class="title-sub">海底撈火鍋</span>
+        <span class="title-highlight">期間限定優惠券領取</span>
+      </h1>
+      <p class="subtitle">
+        活動期間內可點擊立即領取 聯絡活動人員查看領取方式，數量有限，請盡快領取。
+      </p>
+    </header>
+
+    <!-- 官方活動宣傳主視覺海報 -->
+    <section class="poster-section">
+      <div class="poster-card">
+        <img src="haidilao-promo.jpg" alt="海底撈火鍋期間限定優惠券 滿1500折500" class="promo-image" id="promoImg">
+        <div class="poster-badge">
+          <i class="fa-solid fa-certificate"></i> 官方活動海報
+        </div>
+      </div>
+    </section>
+
+    <!-- 倒數計時卡片 -->
+    <section class="timer-section" aria-label="限時倒數">
+      <div class="timer-label">
+        <i class="fa-solid fa-stopwatch-20"></i> 本波優惠領取倒數截止
+      </div>
+      <div class="timer-display">
+        <div class="time-block">
+          <span class="time-num" id="hours">03</span>
+          <span class="time-unit">時</span>
+        </div>
+        <span class="time-colon">:</span>
+        <div class="time-block">
+          <span class="time-num" id="minutes">45</span>
+          <span class="time-unit">分</span>
+        </div>
+        <span class="time-colon">:</span>
+        <div class="time-block">
+          <span class="time-num" id="seconds">28</span>
+          <span class="time-unit">秒</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 優惠券核心卡片 -->
+    <main class="coupon-wrapper">
+      <div class="coupon-card">
+        <!-- 裝飾徽章 -->
+        <div class="ribbon-tag">超值限定</div>
+
+        <!-- 優惠券上半部 -->
+        <div class="coupon-header">
+          <div class="coupon-brand">
+            <div class="brand-logo-circle">
+              <i class="fa-solid fa-fire-burner"></i>
+            </div>
+            <div>
+              <span class="coupon-type">海底撈期間限定優惠卷</span>
+              <span class="coupon-category">尊爵貴賓專屬抵用券</span>
+            </div>
+          </div>
+          <span class="coupon-condition">全時段可用</span>
+        </div>
+
+        <!-- 優惠核心金額展示 -->
+        <div class="coupon-body">
+          <div class="discount-value">
+            <span class="currency">NT$</span>
+            <span class="amount">500</span>
+            <span class="off-text">折抵金</span>
+          </div>
+          <div class="coupon-rules">
+            <div class="rule-title">一鍵領取 $滿1500折500 限時折抵領取</div>
+            <p class="rule-desc">全台門市堂食消費達指定門檻即可全額抵用</p>
+          </div>
+        </div>
+
+        <!-- 撕票線視覺效果 -->
+        <div class="coupon-divider">
+          <div class="notch notch-left"></div>
+          <div class="dash-line"></div>
+          <div class="notch notch-right"></div>
+        </div>
+
+        <!-- 優惠券下半部 / 進度與操作 -->
+        <div class="coupon-footer">
+          <!-- 庫存進度條 -->
+          <div class="stock-info">
+            <div class="stock-text">
+              <span>剩餘配額</span>
+              <strong class="stock-highlight"><span id="stockCount">23</span> / 200 張</strong>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" id="stockProgress" style="width: 88.5%;"></div>
+            </div>
+            <p class="stock-warning"><i class="fa-solid fa-triangle-exclamation"></i> 限時開放，剩餘名額有限。點擊下方按鈕即可聯絡客服領取。</p>
+          </div>
+
+          <!-- 立即領取 CTA 按鈕 -->
+          <div class="cta-container">
+            <a href="https://lin.ee/YXXblgy" target="_blank" rel="noopener noreferrer" class="cta-button" id="claimBtn">
+              <span class="cta-shimmer"></span>
+              <span class="cta-icon"><i class="fa-brands fa-line"></i></span>
+              <span class="cta-text">前往立即領取</span>
+              <span class="cta-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+            </a>
+          </div>
+
+          <!-- 安全驗證徽章 -->
+          <div class="security-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>安全驗證・官方連結</span>
+            <span class="security-dot">•</span>
+            <span class="security-sub">LINE 官方認證</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 注意事項與說明條款 -->
+    <footer class="footer-notes">
+      <div class="rules-card">
+        <h3><i class="fa-solid fa-circle-exclamation"></i> 領取須知與活動規範</h3>
+        <ul class="rule-list">
+          <li class="important-notice">
+            <span class="bullet">※</span>
+            <strong>活動內容與領取每人僅限一次 不得二次領取。</strong>
+          </li>
+          <li>
+            <span class="bullet">•</span>
+            領取成功後，請依客服人員引導完成票券登記與折抵流程。
+          </li>
+          <li>
+            <span class="bullet">•</span>
+            本優惠券不得與其他特定折扣活動或專屬優惠併用。
+          </li>
+          <li>
+            <span class="bullet">•</span>
+            活動名額有限，依系統發送序號完畢為止，敬請及早兌領。
+          </li>
+        </ul>
+      </div>
+
+      <div class="copyright">
+        &copy; 2026 海底撈火鍋 HAIDILAO HOTPOT. 期間限定好禮回饋活動.
+      </div>
+    </footer>
+  </div>
+
+  <!-- 浮動即時領取通知彈窗 -->
+  <div class="live-toast" id="liveToast">
+    <div class="toast-avatar">
+      <i class="fa-solid fa-user-check"></i>
+    </div>
+    <div class="toast-content">
+      <p class="toast-title" id="toastUser">陳*華 剛剛已領取</p>
+      <p class="toast-desc">滿1500折500抵用券已發送至 LINE</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
